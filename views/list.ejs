@@ -1,0 +1,30 @@
+<div class="heading-row">
+<h4>#</h4>
+<h4>Name</h4>
+<h4>Last Traded Price</h4>
+<h4>Buy / Sell Price</h4>
+<h4>Volume</h4>
+<h4>Base Unit</h4>
+</div>
+
+
+<% tickers.forEach( (ticker, index) => { %>
+    <div class="data-row">
+        <h4><%= index + 1 %></h4>
+        <h4><%= ticker.name %></h4>
+        <h4>₹ <%= ticker.last %></h4>
+        <h4>₹ <%= ticker.buy %> / ₹ <%= ticker.sell %></h4>
+        <h4><%= ticker.volume %></h4>
+        <h4><%= ticker.base_unit %></h4>
+    </div>
+<% }) %>
+
+
+CREATE TABLE stocks(
+    name VARCHAR (255) PRIMARY KEY,
+    last VARCHAR (255),
+    buy VARCHAR (255),
+    sell VARCHAR (255),
+    volume VARCHAR (255),
+    base_unit VARCHAR (255)
+);

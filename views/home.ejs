@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+    <img src="images/bodyss.jpeg" class="body-ss">
+
+<div class="heading-row">
+<h4>#</h4>
+<h4>Name</h4>
+<h4>Last Traded Price</h4>
+<h4>Buy / Sell Price</h4>
+<h4>Volume</h4>
+<h4>Base Unit</h4>
+</div>
+
+<!-- here goes data -->
+<% stocks.forEach( (stock, index) => { %>
+    <div class="data-row">
+        <h4><%= index + 1 %></h4>
+        <h4><%= stock.name %></h4>
+        <h4>₹ <%= stock.last %></h4>
+        <h4>₹ <%= stock.buy %> / ₹ <%= stock.sell %></h4>
+        <h4><%= stock.volume %></h4>
+        <h4><%= stock.base_unit %></h4>
+    </div>
+<% }) %>
+
+<%- include('partials/footer') %>
