@@ -1,4 +1,4 @@
-# HodlInfo Clone with EJS
+# Hodlinfo Clone with EJS
 
 A simple web application that fetches cryptocurrency data from the WazirX API and displays it on a web page. This project is built using Node.js, Express, EJS (Embedded JavaScript templates), and PostgreSQL.
 
