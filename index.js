@@ -54,8 +54,8 @@ const getStocksfromDB = async () =>{
 //routes
 app.get("/", async (req, res)=>{
     const stocks = await getStocksfromDB();
-    res.render("home", {stocks});
     await fetchAndStore();
+    res.render("home", {stocks});
 });
 
 app.listen(3000, ()=>{
